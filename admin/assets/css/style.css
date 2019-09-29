@@ -1,0 +1,23 @@
+.main-content {
+	margin-top: 50px;
+}
+
+.content {
+	padding: 10px;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 7px #aaa;
+}
+
+
+.footer {
+	margin-top: 30px;
+}
+
+/* Style for frontend */
+
+.single-post {
+	margin-bottom: 25px;
+}
+.single-post img {
+	width: 100%;
+}
