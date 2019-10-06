@@ -41,7 +41,11 @@ include('include/header.php');
 				
 				<?php while( $row = mysqli_fetch_assoc( $result ) ) { ?>
 					<div class="single-post">
-						<h2> <?php echo $row['title']; ?> </h2>
+						<h2> 
+							<a href="<?php echo $url; ?>/single.php?id=<?php echo $row['id']; ?>">
+								<?php echo $row['title']; ?> 
+							</a>
+						</h2>
 						<div class="row">
 							<div class="col-md-3">
 								<img src="admin/<?php echo $row['image']; ?>" alt="">
@@ -58,12 +62,21 @@ include('include/header.php');
 				</div>
 
 				<div class="row clearfix">
-					<div class="col-md-6">
+					<div class="col-md-3">
 						<?php if($page > 1) { ?>
 							<a href="<?php echo $url ?>index.php?page=<?php echo $page - 1; ?>"> << Previous </a>
 						<?php } ?>
 					</div>
 					<div class="col-md-6">
+						<div class="text-center">
+							<?php for($i = 1; $i <= $totalPage; $i++ ) { ?>
+								<a href="<?php echo $url ?>index.php?page=<?php echo $i; ?>" class="pagination"> 
+									<?php echo $i; ?> 
+								</a>	
+							<?php } ?>
+						</div>
+					</div>
+					<div class="col-md-3">
 						<div class="text-right">
 							<?php if ($totalPage > $page): ?>
 								<a href="<?php echo $url ?>index.php?page=<?php echo $page + 1; ?>"> Next >> </a>	

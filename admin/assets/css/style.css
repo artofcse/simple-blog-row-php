@@ -21,3 +21,9 @@
 .single-post img {
 	width: 100%;
 }
+
+.pagination {
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
